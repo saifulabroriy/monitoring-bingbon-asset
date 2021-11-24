@@ -1,6 +1,6 @@
 <?php
     // Include file module telegram 
-    include "telegram.php";
+    include_once "telegram.php";
 
     // Mendapatkan state bot telegram
     $state = $_POST["state"];
@@ -78,16 +78,17 @@
         // Mendapatkan timestamp dari mikrotime bingbon
         $waktu = round($data['timestamp'] / 1000 );
 
-        $msg = "Waktu Server: " . date('j M Y, H:i:s', $waktu) . " \n\n";
+        $msg = "Waktu Server: " . date('j M Y, H:i:s', $waktu) . " %0a%0a";
         $msg .= "LOW %0a%0a";
         // Jika array low ada isinya
         if (count($low) > 0){
             for ($i=0; $i < count($low); $i++) { 
                 $msg .= $i + 1 . ". " . $low[$i] . " %0a";
             }
+            $msg .= "%0a";
         }
         
-        $msg .= "%0a HIGH %0a%0a";
+        $msg .= "HIGH %0a%0a";
         // Jika array high ada isinya
         if (count($high) > 0){
             for ($i=0; $i < count($high); $i++) { 
