@@ -74,23 +74,23 @@
     }
 
     // Jika state yang dikirim true
-    if ($state){
+    if ($state == "true"){
         // Mendapatkan timestamp dari mikrotime bingbon
         $waktu = round($data['timestamp'] / 1000 );
 
         $msg = "Waktu Server: " . date('j M Y, H:i:s', $waktu) . " %0a%0a";
-        $msg .= "LOW %0a%0a";
         // Jika array low ada isinya
         if (count($low) > 0){
+            $msg .= "LOW %0a%0a";
             for ($i=0; $i < count($low); $i++) { 
                 $msg .= $i + 1 . ". " . $low[$i] . " %0a";
             }
             $msg .= "%0a";
         }
         
-        $msg .= "HIGH %0a%0a";
         // Jika array high ada isinya
         if (count($high) > 0){
+            $msg .= "HIGH %0a%0a";
             for ($i=0; $i < count($high); $i++) { 
                 $msg .= $i + 1 . ". " . $high[$i] . " %0a";
             }
