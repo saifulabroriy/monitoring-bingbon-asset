@@ -40,6 +40,11 @@ sliderTab.on('input', function () {
     sliderValue.html(timer)
 })
 
+sliderTab.on('mousemove', function () {
+    const color = `linear-gradient(to right, #1cb81c ${((timer - 10) * 100) / (60 - 10)}%, #fff ${((timer - 10) * 100) / (60 - 10)}%)`
+    $(this).css("background", color)
+})
+
 // Initial price
 getMarkets()
 

@@ -26,7 +26,6 @@
         <p class="tele__detail">Bot tidak mengirimkan pesan</p>
       </section>
       <section class="tool">
-        <h2 class="tool__title">Marketplace Bingbon</h2>
         <div class="timer">
           <h3 class="timer__title">Timer</h3>
           <div class="slider">
@@ -35,6 +34,7 @@
             <p class="slider__sec">Detik</p>
           </div>
         </div>
+        <h2 class="tool__title">Marketplace Bingbon</h2>
       </section>
       <section class="table">
         <table>
