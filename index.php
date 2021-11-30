@@ -27,6 +27,14 @@
       </section>
       <section class="tool">
         <h2 class="tool__title">Marketplace Bingbon</h2>
+        <div class="timer">
+          <h3 class="timer__title">Timer</h3>
+          <div class="slider">
+            <input type="range" min="10" max="60" value="20" step="5" class="slider__tab">
+            <span class="slider__value"></span>
+            <p class="slider__sec">Detik</p>
+          </div>
+        </div>
       </section>
       <section class="table">
         <table>

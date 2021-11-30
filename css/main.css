@@ -80,6 +80,36 @@ table {
 .tool__title {
   font-size: 1.2rem;
   text-align: center;
+  margin-bottom: 1rem;
+}
+
+.timer {
+  background-color: #ddd;
+  width: 400px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  margin: 0 auto;
+}
+.timer .timer__title {
+  text-align: center;
+}
+.timer .slider {
+  display: flex;
+}
+.timer .slider__tab {
+  width: 100%;
+  height: 30px;
+  margin-right: 1rem;
+}
+.timer .slider__tab::-webkit-slider-thumb {
+  cursor: pointer;
+}
+.timer .slider__value, .timer .slider__sec {
+  font-weight: bold;
+}
+.timer .slider__value {
+  margin-right: 3px;
 }
 
 .table {

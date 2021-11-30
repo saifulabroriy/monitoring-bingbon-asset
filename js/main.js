@@ -1,3 +1,4 @@
+// Get markets price
 function getMarkets(state = false) {
     $.post("bingbon.php", {state}, function(data, status){
         $(".table__body").html(data)
@@ -23,14 +24,30 @@ stopBot.click(function() {
     teleDetail.html("Bot tidak mengirimkan pesan")
 })
 
-// Page first opened
+// Slider
+const sliderTab = $(".slider__tab")
+const sliderValue = $(".slider__value")
+
+// nilai detik
+let timer = sliderTab.val()
+
+// Show initial value of slider
+sliderValue.html(timer)
+
+// Update value
+sliderTab.on('input', function () {
+    timer = sliderTab.val()
+    sliderValue.html(timer)
+})
+
+// Initial price
 getMarkets()
 
-// Interval for 2 sec
+// Interval for refresh asset prices
 setInterval(() => {
     if (startBot.hasClass("tele__btn--clicked")){
         getMarkets(true)
     } else if (stopBot.hasClass("tele__btn--clicked")) {
         getMarkets()
     }
-}, 2000);
+}, timer * 1000);
